@@ -162,7 +162,7 @@ if (LINUX)
         PkgConfig::GIO
     )
 
-    target_compile_definitions(Telegram PRIVATE G_LOG_DOMAIN="Kotatogram")
+    target_compile_definitions(Telegram PRIVATE G_LOG_DOMAIN="Prestongram")
 
     if (NOT TDESKTOP_DISABLE_GTK_INTEGRATION)
         find_package(PkgConfig REQUIRED)
@@ -1181,7 +1181,7 @@ PRIVATE
     qrc/emoji_preview.qrc
     qrc/telegram/telegram.qrc
     qrc/telegram/sounds.qrc
-    winrc/Kotatogram.rc
+    winrc/Prestongram.rc
     winrc/Telegram.manifest
     langs/lang.strings
     langs/cloud_lang.strings
@@ -1250,7 +1250,7 @@ endif()
 if (build_macstore)
     set(bundle_identifier "io.github.kotatogram")
     set(bundle_entitlements "Telegram Lite.entitlements")
-    set(output_name "Kotatogram Lite")
+    set(output_name "Prestongram Lite")
     set_target_properties(Telegram PROPERTIES
         XCODE_ATTRIBUTE_FRAMEWORK_SEARCH_PATHS ${libs_loc}/breakpad/src/client/mac/build/Release
     )
@@ -1264,14 +1264,14 @@ if (build_macstore)
 elseif (build_osx)
     set(bundle_identifier "io.github.kotatogram$<$<CONFIG:Debug>:DebugOsx>")
     set(bundle_entitlements "Telegram.entitlements")
-    set(output_name "Kotatogram")
+    set(output_name "Prestongram")
 else()
     set(bundle_identifier "io.github.kotatogram$<$<CONFIG:Debug>:Debug>")
     set(bundle_entitlements "Telegram.entitlements")
     if (LINUX AND DESKTOP_APP_USE_PACKAGED)
         set(output_name "kotatogram-desktop")
     else()
-        set(output_name "Kotatogram")
+        set(output_name "Prestongram")
     endif()
 endif()
 
@@ -1307,7 +1307,7 @@ PRIVATE
     TDESKTOP_API_HASH=${TDESKTOP_API_HASH}
 )
 
-if (APPLE OR NOT CMAKE_EXECUTABLE_SUFFIX STREQUAL "" OR NOT "${output_name}" STREQUAL "Kotatogram")
+if (APPLE OR NOT CMAKE_EXECUTABLE_SUFFIX STREQUAL "" OR NOT "${output_name}" STREQUAL "Prestongram")
     set(output_folder ${CMAKE_BINARY_DIR})
 elseif (DESKTOP_APP_SPECIAL_TARGET STREQUAL "")
     set(output_folder ${CMAKE_BINARY_DIR}/bin)
@@ -1333,7 +1333,7 @@ if ((NOT DESKTOP_APP_DISABLE_AUTOUPDATE OR APPLE) AND NOT build_macstore AND NOT
 
     nice_target_sources(Updater ${res_loc}
     PRIVATE
-        winrc/KotatogramUpdater.rc
+        winrc/PrestongramUpdater.rc
     )
 
     set_target_properties(Updater PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${output_folder})

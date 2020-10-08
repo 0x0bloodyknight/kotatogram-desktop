@@ -562,9 +562,9 @@ jobs:
           if [ -n "${{ matrix.defines }}" ]; then
             DEFINE="-D ${{ matrix.defines }}=ON"
             echo Define from matrix: $DEFINE
-            echo ::set-env name=ARTIFACT_NAME::Kotatogram_${{ matrix.defines }}
+            echo ::set-env name=ARTIFACT_NAME::Prestongram_${{ matrix.defines }}
           else
-            echo ::set-env name=ARTIFACT_NAME::Kotatogram
+            echo ::set-env name=ARTIFACT_NAME::Prestongram
           fi
 
           ./configure.sh \
@@ -580,7 +580,7 @@ jobs:
       - name: Check.
         if: env.ONLY_CACHE == 'false'
         run: |
-          filePath="$REPO_NAME/out/Debug/bin/Kotatogram"
+          filePath="$REPO_NAME/out/Debug/bin/Prestongram"
           if test -f "$filePath"; then
             echo "Build successfully done! :)"
 
@@ -596,7 +596,7 @@ jobs:
         run: |
           cd $REPO_NAME/out/Debug/bin
           mkdir artifact
-          mv Kotatogram artifact/
+          mv Prestongram artifact/
       - uses: actions/upload-artifact@master
         if: env.UPLOAD_ARTIFACT == 'true'
         name: Upload artifact.

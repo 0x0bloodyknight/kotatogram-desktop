@@ -704,7 +704,7 @@ void NativeManager::doShowNotification(
 		&& (item->out() || peer->isSelf())
 		&& item->isFromScheduled();
 	const auto title = options.hideNameAndPhoto
-		? qsl("Kotatogram Desktop")
+		? qsl("Prestongram Desktop")
 		: (scheduled && peer->isSelf())
 		? tr::lng_notification_reminder(tr::now)
 		: peer->name;

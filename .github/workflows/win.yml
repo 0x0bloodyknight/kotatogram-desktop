@@ -413,13 +413,13 @@ jobs:
           if [ -n "${{ matrix.defines }}" ]; then
             DEFINE="-D ${{ matrix.defines }}=ON"
             echo Define from matrix: $DEFINE
-            echo ::set-env name=ARTIFACT_NAME::Kotatogram_${{ matrix.defines }}
+            echo ::set-env name=ARTIFACT_NAME::Prestongram_${{ matrix.defines }}
           else
-            echo ::set-env name=ARTIFACT_NAME::Kotatogram
+            echo ::set-env name=ARTIFACT_NAME::Prestongram
           fi
           echo "::set-env name=TDESKTOP_BUILD_DEFINE::$DEFINE"
 
-      - name: Kotatogram Desktop build.
+      - name: Prestongram Desktop build.
         if: env.ONLY_CACHE == 'false'
         shell: cmd
         timeout-minutes: 120
@@ -444,7 +444,7 @@ jobs:
         run: |
           cd %REPO_NAME%\out\Debug
           mkdir artifact
-          move Kotatogram.exe artifact/
+          move Prestongram.exe artifact/
       - uses: actions/upload-artifact@master
         name: Upload artifact.
         if: env.UPLOAD_ARTIFACT == 'true'

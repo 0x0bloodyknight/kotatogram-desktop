@@ -61,7 +61,7 @@ HWND createTaskbarHider() {
 	HINSTANCE appinst = (HINSTANCE)GetModuleHandle(0);
 	HWND hWnd = 0;
 
-	QString cn = QString("KotatogramTaskbarHider");
+	QString cn = QString("PrestongramTaskbarHider");
 	LPCWSTR _cn = (LPCWSTR)cn.utf16();
 	WNDCLASSEX wc;
 

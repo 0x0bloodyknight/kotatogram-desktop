@@ -559,7 +559,7 @@ MainMenu::MainMenu(
 	refreshMenu();
 	refreshBackground();
 
-	_telegram->setRichText(textcmdLink(1, qsl("Kotatogram Desktop")));
+	_telegram->setRichText(textcmdLink(1, qsl("Prestongram Desktop")));
 	_telegram->setLink(1, std::make_shared<LambdaClickHandler>([] { Ui::show(Box<AboutBox>()); }));
 	_version->setRichText(textcmdLink(1, currentVersionText()));
 	_version->setLink(1, std::make_shared<UrlClickHandler>(qsl("https://github.com/kotatogram/kotatogram-desktop")));

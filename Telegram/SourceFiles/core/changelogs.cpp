@@ -120,7 +120,7 @@ Changelogs::Changelogs(not_null<Main::Session*> session, int oldVersion, int old
 , _oldVersion(oldVersion)
 , _oldKotatoVersion(oldKotatoVersion) {
 
-	LOG(("Previous Kotatogram version: %1").arg(_oldKotatoVersion));
+	LOG(("Previous Prestongram version: %1").arg(_oldKotatoVersion));
 
 	_session->data().chatsListChanges(
 	) | rpl::filter([](Data::Folder *folder) {

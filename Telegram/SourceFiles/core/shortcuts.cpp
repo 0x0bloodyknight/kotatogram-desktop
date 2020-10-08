@@ -104,7 +104,7 @@ const auto CommandByName = base::flat_map<QString, Command>{
 	{ qsl("pinned_4")          , Command::ChatPinned4 },
 	{ qsl("pinned_5")          , Command::ChatPinned5 },
 
-	// Kotatogram: legacy keys
+	// Prestongram: legacy keys
 	{ qsl("folder_all")        , Command::ShowAllChats },
 	{ qsl("folder_1")          , Command::ShowFolder1 },
 	{ qsl("folder_2")          , Command::ShowFolder2 },
@@ -421,7 +421,7 @@ void Manager::writeDefaultFile() {
 		return;
 	}
 	const char *defaultHeader = R"HEADER(
-// This is a list of default shortcuts for Kotatogram Desktop
+// This is a list of default shortcuts for Prestongram Desktop
 // Please don't modify it, its content is not used in any way
 // You can place your own shortcuts in the 'shortcuts-custom.json' file
 

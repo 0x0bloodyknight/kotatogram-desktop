@@ -1,12 +1,12 @@
 [Desktop Entry]
 Version=1.0
-Name=Kotatogram Desktop
+Name=Prestongram Desktop
 Comment=Experimental Telegram Desktop fork
 TryExec=kotatogram-desktop
 Exec=kotatogram-desktop -- %u
 Icon=kotatogram
 Terminal=false
-StartupWMClass=KotatogramDesktop
+StartupWMClass=PrestongramDesktop
 Type=Application
 Categories=Chat;Network;InstantMessaging;Qt;
 MimeType=x-scheme-handler/tg;

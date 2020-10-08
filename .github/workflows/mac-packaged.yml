@@ -248,7 +248,7 @@ jobs:
 
           cmake --build build -j$(sysctl -n hw.logicalcpu)
 
-      - name: Kotatogram Desktop build.
+      - name: Prestongram Desktop build.
         if: env.ONLY_CACHE == 'false'
         env:
           tg_owt_DIR: ${{ env.LibrariesPath }}/tg_owt/build
@@ -259,9 +259,9 @@ jobs:
           if [ -n "${{ matrix.defines }}" ]; then
             DEFINE="-D ${{ matrix.defines }}=ON"
             echo Define from matrix: $DEFINE
-            echo ::set-env name=ARTIFACT_NAME::Kotatogram_${{ matrix.defines }}
+            echo ::set-env name=ARTIFACT_NAME::Prestongram_${{ matrix.defines }}
           else
-            echo ::set-env name=ARTIFACT_NAME::Kotatogram
+            echo ::set-env name=ARTIFACT_NAME::Prestongram
           fi
 
           ./configure.sh \
@@ -274,19 +274,19 @@ jobs:
           cmake --build ../out --config Debug
 
           cd ../out/Debug
-          macdeployqt Kotatogram.app
-          codesign --remove-signature Kotatogram.app
+          macdeployqt Prestongram.app
+          codesign --remove-signature Prestongram.app
 
           mkdir dmgsrc
-          mv Kotatogram.app dmgsrc
-          hdiutil create -volname Kotatogram -srcfolder dmgsrc -ov -format UDZO Kotatogram.dmg
+          mv Prestongram.app dmgsrc
+          hdiutil create -volname Prestongram -srcfolder dmgsrc -ov -format UDZO Prestongram.dmg
 
       - name: Move artifact.
         if: env.UPLOAD_ARTIFACT == 'true'
         run: |
           cd $REPO_NAME/out/Debug
           mkdir artifact
-          mv Kotatogram.dmg artifact/
+          mv Prestongram.dmg artifact/
       - uses: actions/upload-artifact@master
         if: env.UPLOAD_ARTIFACT == 'true'
         name: Upload artifact.

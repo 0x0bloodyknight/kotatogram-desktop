@@ -1,8 +1,8 @@
-#define MyAppShortName "Kotatogram"
-#define MyAppName "Kotatogram Desktop"
-#define MyAppPublisher "Kotatogram"
+#define MyAppShortName "Prestongram"
+#define MyAppName "Prestongram Desktop"
+#define MyAppPublisher "Prestongram"
 #define MyAppURL "https://kotatogram.github.io"
-#define MyAppExeName "Kotatogram.exe"
+#define MyAppExeName "Prestongram.exe"
 #define MyAppId "C4A4AE8F-B9F7-4CC7-8A6C-BF7EEE87ACA5"
 
 [Setup]
@@ -22,7 +22,7 @@ AllowNoIcons=yes
 OutputDir={#ReleasePath}
 OutputBaseFilename=ksetup.{#MyAppVersionFull}
 SetupIconFile={#SourcePath}..\Resources\art\icon256.ico
-UninstallDisplayIcon={app}\Kotatogram.exe
+UninstallDisplayIcon={app}\Prestongram.exe
 Compression=lzma
 SolidCompression=yes
 DisableStartupPrompt=yes
@@ -48,7 +48,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "{#ReleasePath}\Kotatogram.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#ReleasePath}\Prestongram.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#ReleasePath}\Updater.exe"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

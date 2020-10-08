@@ -1,6 +1,6 @@
 # Contributing
 
-This document describes how you can contribute to Kotatogram Desktop. Please read it carefully.
+This document describes how you can contribute to Prestongram Desktop. Please read it carefully.
 
 **Table of Contents**
 
@@ -18,7 +18,7 @@ This document describes how you can contribute to Kotatogram Desktop. Please rea
 
 ## What contributions are accepted
 
-Before contribute to Kotatogram Desktop, you could try to contribute to Telegram Desktop in following cases:
+Before contribute to Prestongram Desktop, you could try to contribute to Telegram Desktop in following cases:
 
 * Bug fixes of original Telegram Desktop features
 * Optimization of Telegram Desktop's source code and documentation
@@ -27,7 +27,7 @@ If your PR is merged into the official app, it will help both apps (as well as m
 
 If your feature couldn't be added to official Telegram Desktop (e.g. new feature), you can try to [submit a pull request here][pr].
 
-Following contributions are accepted to Kotatogram Desktop:
+Following contributions are accepted to Prestongram Desktop:
 
 * Bug fixes and improvements
 * New features
@@ -47,13 +47,13 @@ Please note: if you submit a PR with translation, it won't be merged. Instead it
 
 ## Build instructions
 
-Build instructions of Kotatogram Desktop are practically same, as Telegram Desktop's. See the [README.md][build_instructions] for details on the various build environments.
+Build instructions of Prestongram Desktop are practically same, as Telegram Desktop's. See the [README.md][build_instructions] for details on the various build environments.
 
 Of course, you should clone `https://github.com/kotatogram/kotatogram-desktop.git` instead of `https://github.com/telegramdesktop/tdesktop.git`.
 
 ## Pull upstream changes into your fork regularly
 
-Kotatogram Desktop is advancing quickly. It is therefore critical that you pull upstream changes into your fork on a regular basis. Nothing is worse than putting in a days of hard work into a pull request only to have it rejected because it has diverged too far from upstream.
+Prestongram Desktop is advancing quickly. It is therefore critical that you pull upstream changes into your fork on a regular basis. Nothing is worse than putting in a days of hard work into a pull request only to have it rejected because it has diverged too far from upstream.
 
 To pull in upstream changes:
 
@@ -76,7 +76,7 @@ For more info, see [GitHub Help][help_fork_repo].
 
 ## How to get your pull request accepted
 
-We want to improve Kotatogram Desktop with your contributions. But we also want to provide a stable experience for our users and the community. Follow these rules and you should succeed without a problem!
+We want to improve Prestongram Desktop with your contributions. But we also want to provide a stable experience for our users and the community. Follow these rules and you should succeed without a problem!
 
 ### Keep your pull requests limited to a single issue
 
@@ -115,7 +115,7 @@ Furthermore, the pixel shortage is over. We want to see:
 
 ### Test your changes!
 
-Before you submit a pull request, please test your changes. Verify that Kotatogram Desktop still works and your changes don't cause other issue or crashes.
+Before you submit a pull request, please test your changes. Verify that Prestongram Desktop still works and your changes don't cause other issue or crashes.
 
 ### Write a good commit message
 

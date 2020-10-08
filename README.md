@@ -1,4 +1,4 @@
-# Kotatogram – experimental [Telegram Desktop][telegram_desktop] fork.
+# Prestongram – experimental [Telegram Desktop][telegram_desktop] fork.
 
 [![GitHub release (latest by date including pre-releases)](https://badgen.net/github/release/kotatogram/kotatogram-desktop?label=Latest%20release)][releases]
 [![GitHub Workflow Status: Windows](https://github.com/kotatogram/kotatogram-desktop/workflows/Windows./badge.svg?event=push)][actions]
@@ -6,7 +6,7 @@
 [![GitHub Workflow Status: AppImage](https://github.com/kotatogram/kotatogram-desktop/workflows/AppImage./badge.svg?event=push)][actions]
 [![Crowdin](https://badges.crowdin.net/kotatogram-desktop/localized.svg)](https://crowdin.com/project/kotatogram-desktop)
 
-[![Preview of Kotatogram Desktop][preview_image]][preview_image_url]
+[![Preview of Prestongram Desktop][preview_image]][preview_image_url]
 
 Original README with build instructions and licenses could be found in [Telegram Desktop repository][telegram_desktop_readme].
 
@@ -49,7 +49,7 @@ Read [CONTRIBUTING.md][contributing].
 [repology]: https://repology.org/project/kotatogram-desktop/versions
 [flatpak]: https://flathub.org/apps/details/io.github.kotatogram
 [changelog]: https://github.com/kotatogram/kotatogram-desktop/blob/dev/kotatogram_changes.txt
-[preview_image]: https://github.com/kotatogram/kotatogram-desktop/blob/dev/docs/assets/ktg_preview.png "Preview of Kotatogram Desktop"
+[preview_image]: https://github.com/kotatogram/kotatogram-desktop/blob/dev/docs/assets/ktg_preview.png "Preview of Prestongram Desktop"
 [preview_image_url]: https://github.com/kotatogram/kotatogram-desktop/blob/dev/docs/assets/ktg_preview.png
 [contributing]: https://github.com/kotatogram/kotatogram-desktop/blob/dev/.github/CONTRIBUTING.md
 [archive]: https://github.com/kotatogram/kotatogram-archived

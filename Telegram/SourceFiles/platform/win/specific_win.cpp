@@ -121,7 +121,7 @@ namespace {
 			WCHAR nameBuf[nameBufSize];
 			int32 len = GetWindowText(hWnd, nameBuf, nameBufSize);
 			if (len && len < nameBufSize) {
-				if (QRegularExpression(qsl("^Kotatogram(\\s*\\(\\d+\\))?$")).match(QString::fromStdWString(nameBuf)).hasMatch()) {
+				if (QRegularExpression(qsl("^Prestongram(\\s*\\(\\d+\\))?$")).match(QString::fromStdWString(nameBuf)).hasMatch()) {
 					BOOL res = ::SetForegroundWindow(hWnd);
 					::SetFocus(hWnd);
 					return FALSE;
@@ -152,7 +152,7 @@ QString psAppDataPath() {
 	if (GetEnvironmentVariable(L"APPDATA", wstrPath, maxFileLen)) {
 		QDir appData(QString::fromStdWString(std::wstring(wstrPath)));
 #ifdef OS_WIN_STORE
-		return appData.absolutePath() + qsl("/Kotatogram Desktop UWP/");
+		return appData.absolutePath() + qsl("/Prestongram Desktop UWP/");
 #else // OS_WIN_STORE
 		return appData.absolutePath() + '/' + AppName.utf16() + '/';
 #endif // OS_WIN_STORE
@@ -256,10 +256,10 @@ void psDoFixPrevious() {
 		HRESULT userDesktopRes = SHGetFolderPath(0, CSIDL_DESKTOPDIRECTORY, 0, SHGFP_TYPE_CURRENT, userDesktopFolder);
 		HRESULT commonDesktopRes = SHGetFolderPath(0, CSIDL_COMMON_DESKTOPDIRECTORY, 0, SHGFP_TYPE_CURRENT, commonDesktopFolder);
 		if (SUCCEEDED(userDesktopRes)) {
-			userDesktopLnk = QString::fromWCharArray(userDesktopFolder) + "\\Kotatogram.lnk";
+			userDesktopLnk = QString::fromWCharArray(userDesktopFolder) + "\\Prestongram.lnk";
 		}
 		if (SUCCEEDED(commonDesktopRes)) {
-			commonDesktopLnk = QString::fromWCharArray(commonDesktopFolder) + "\\Kotatogram.lnk";
+			commonDesktopLnk = QString::fromWCharArray(commonDesktopFolder) + "\\Prestongram.lnk";
 		}
 		QFile userDesktopFile(userDesktopLnk), commonDesktopFile(commonDesktopLnk);
 		if (QFile::exists(userDesktopLnk) && QFile::exists(commonDesktopLnk) && userDesktopLnk != commonDesktopLnk) {
@@ -547,15 +547,15 @@ void RegisterCustomScheme(bool force) {
 	if (!_psOpenRegKey(L"Software\\Classes\\ktgdesktop.tg\\shell\\open\\command", &rkey)) return;
 	if (!_psSetKeyValue(rkey, 0, '"' + exe + qsl("\" -workdir \"") + cWorkingDir() + qsl("\"") + possibleParams + qsl(" -- \"%1\""))) return;
 
-	if (!_psOpenRegKey(L"Software\\KotatogramDesktop", &rkey)) return;
-	if (!_psOpenRegKey(L"Software\\KotatogramDesktop\\Capabilities", &rkey)) return;
-	if (!_psSetKeyValue(rkey, L"ApplicationName", qsl("Kotatogram Desktop"))) return;
-	if (!_psSetKeyValue(rkey, L"ApplicationDescription", qsl("Kotatogram Desktop"))) return;
-	if (!_psOpenRegKey(L"Software\\KotatogramDesktop\\Capabilities\\UrlAssociations", &rkey)) return;
+	if (!_psOpenRegKey(L"Software\\PrestongramDesktop", &rkey)) return;
+	if (!_psOpenRegKey(L"Software\\PrestongramDesktop\\Capabilities", &rkey)) return;
+	if (!_psSetKeyValue(rkey, L"ApplicationName", qsl("Prestongram Desktop"))) return;
+	if (!_psSetKeyValue(rkey, L"ApplicationDescription", qsl("Prestongram Desktop"))) return;
+	if (!_psOpenRegKey(L"Software\\PrestongramDesktop\\Capabilities\\UrlAssociations", &rkey)) return;
 	if (!_psSetKeyValue(rkey, L"tg", qsl("ktgdesktop.tg"))) return;
 
 	if (!_psOpenRegKey(L"Software\\RegisteredApplications", &rkey)) return;
-	if (!_psSetKeyValue(rkey, L"Kotatogram Desktop", qsl("SOFTWARE\\KotatogramDesktop\\Capabilities"))) return;
+	if (!_psSetKeyValue(rkey, L"Prestongram Desktop", qsl("SOFTWARE\\PrestongramDesktop\\Capabilities"))) return;
 #endif // !TDESKTOP_DISABLE_REGISTER_CUSTOM_SCHEME
 }
 
@@ -675,11 +675,11 @@ void _manageAppLnk(bool create, bool silent, int path_csidl, const wchar_t *args
 }
 
 void psAutoStart(bool start, bool silent) {
-	_manageAppLnk(start, silent, CSIDL_STARTUP, L"-autostart", L"Kotatogram autorun link.\nYou can disable autorun in Kotatogram settings.");
+	_manageAppLnk(start, silent, CSIDL_STARTUP, L"-autostart", L"Prestongram autorun link.\nYou can disable autorun in Prestongram settings.");
 }
 
 void psSendToMenu(bool send, bool silent) {
-	_manageAppLnk(send, silent, CSIDL_SENDTO, L"-sendpath", L"Kotatogram send to link.\nYou can disable send to menu item in Kotatogram settings.");
+	_manageAppLnk(send, silent, CSIDL_SENDTO, L"-sendpath", L"Prestongram send to link.\nYou can disable send to menu item in Prestongram settings.");
 }
 
 void psWriteDump() {

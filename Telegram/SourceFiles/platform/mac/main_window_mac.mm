@@ -350,7 +350,7 @@ void MainWindow::Private::initCustomTitle() {
 
 	if (UseNativeDecorations()) {
 		_useNativeTitle = true;
-		setWindowTitle(qsl("Kotatogram"));
+		setWindowTitle(qsl("Prestongram"));
 	}
 #endif // !OS_MAC_OLD
 }
@@ -684,8 +684,8 @@ void MainWindow::initShadows() {
 }
 
 void MainWindow::createGlobalMenu() {
-	auto main = psMainMenu.addMenu(qsl("Kotatogram"));
-	auto about = main->addAction(tr::lng_mac_menu_about_telegram(tr::now, lt_telegram, qsl("Kotatogram")));
+	auto main = psMainMenu.addMenu(qsl("Prestongram"));
+	auto about = main->addAction(tr::lng_mac_menu_about_telegram(tr::now, lt_telegram, qsl("Prestongram")));
 	connect(about, &QAction::triggered, about, [] {
 		if (App::wnd() && App::wnd()->isHidden()) App::wnd()->showFromTray();
 		Ui::show(Box<AboutBox>());

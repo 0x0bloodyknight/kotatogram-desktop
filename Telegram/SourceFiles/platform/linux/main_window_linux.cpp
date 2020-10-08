@@ -812,7 +812,7 @@ void MainWindow::createGlobalMenu() {
 	});
 
 	auto quit = file->addAction(
-		tr::lng_mac_menu_quit_telegram(tr::now, lt_telegram, qsl("Kotatogram")),
+		tr::lng_mac_menu_quit_telegram(tr::now, lt_telegram, qsl("Prestongram")),
 		App::wnd(),
 		[=] { App::wnd()->quitFromTray(); },
 		QKeySequence::Quit);
@@ -963,7 +963,7 @@ void MainWindow::createGlobalMenu() {
 		tr::lng_mac_menu_about_telegram(
 			tr::now,
 			lt_telegram,
-			qsl("Kotatogram")),
+			qsl("Prestongram")),
 		[] {
 			if (App::wnd() && App::wnd()->isHidden()) {
 				App::wnd()->showFromTray();

@@ -28,7 +28,7 @@ jobs:
           # See https://forum.snapcraft.io/t/permissions-problem-using-snapcraft-in-azure-pipelines/13258
           sudo chown root:root /
 
-      - name: Kotatogram Desktop snap build
+      - name: Prestongram Desktop snap build
         run: sudo snap run snapcraft --destructive-mode
 
       - name: Get artifact name

@@ -298,7 +298,7 @@ void Launcher::init() {
 		}
 	});
 
-	QApplication::setApplicationName(qsl("KotatogramDesktop"));
+	QApplication::setApplicationName(qsl("PrestongramDesktop"));
 
 #if defined Q_OS_UNIX && !defined Q_OS_MAC && QT_VERSION >= QT_VERSION_CHECK(5, 7, 0)
 	QApplication::setDesktopFileName(Platform::GetLauncherFilename());
@@ -345,7 +345,7 @@ int Launcher::exec() {
 
 	auto result = executeApplication();
 
-	DEBUG_LOG(("Kotatogram finished, result: %1").arg(result));
+	DEBUG_LOG(("Prestongram finished, result: %1").arg(result));
 
 	if (!UpdaterDisabled() && cRestartingUpdate()) {
 		DEBUG_LOG(("Sandbox Info: executing updater to install update."));
@@ -353,7 +353,7 @@ int Launcher::exec() {
 			psDeleteDir(cWorkingDir() + qsl("tupdates/temp"));
 		}
 	} else if (cRestarting()) {
-		DEBUG_LOG(("Sandbox Info: executing Kotatogram because of restart."));
+		DEBUG_LOG(("Sandbox Info: executing Prestongram because of restart."));
 		launchUpdater(UpdaterLaunch::JustRelaunch);
 	}
 

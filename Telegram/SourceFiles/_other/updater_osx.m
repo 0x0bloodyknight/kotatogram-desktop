@@ -8,7 +8,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 #import <Cocoa/Cocoa.h>
 #include <sys/xattr.h>
 
-NSString *appName = @"Kotatogram.app";
+NSString *appName = @"Prestongram.app";
 NSString *appDir = nil;
 NSString *workDir = nil;
 
@@ -54,7 +54,7 @@ void RemoveQuarantineAttribute(NSString *path) {
 
 void RemoveQuarantineFromBundle(NSString *path) {
 	RemoveQuarantineAttribute(path);
-	RemoveQuarantineAttribute([path stringByAppendingString:@"/Contents/MacOS/Kotatogram"]);
+	RemoveQuarantineAttribute([path stringByAppendingString:@"/Contents/MacOS/Prestongram"]);
 	RemoveQuarantineAttribute([path stringByAppendingString:@"/Contents/Helpers/crashpad_handler"]);
 	RemoveQuarantineAttribute([path stringByAppendingString:@"/Contents/Frameworks/Updater"]);
 }
@@ -175,9 +175,9 @@ int main(int argc, const char * argv[]) {
 
 		writeLog([@"Starting update files iteration, path: " stringByAppendingString: srcEnum]);
 
-		// Take the Updater (this currently running binary) from the place where it was placed by Kotatogram
+		// Take the Updater (this currently running binary) from the place where it was placed by Prestongram
 		// and copy it to the folder with the new version of the app (ready),
-		// so it won't be deleted when we will clear the "Kotatogram.app/Contents" folder.
+		// so it won't be deleted when we will clear the "Prestongram.app/Contents" folder.
 		NSString *oldVersionUpdaterPath = [appDirFull stringByAppendingString: @"/Contents/Frameworks/Updater" ];
 		NSString *newVersionUpdaterPath = [srcEnum stringByAppendingString:[[NSArray arrayWithObjects:@"/", appName, @"/Contents/Frameworks/Updater", nil] componentsJoinedByString:@""]];
 		writeLog([[NSArray arrayWithObjects: @"Copying Updater from old path ", oldVersionUpdaterPath, @" to new path ", newVersionUpdaterPath, nil] componentsJoinedByString:@""]);

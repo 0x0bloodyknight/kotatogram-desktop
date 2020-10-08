@@ -486,7 +486,7 @@ jobs:
           mkdir -p out/Debug
           mv libtg_owt.a out/Debug/libtg_owt.a
 
-      - name: Kotatogram Desktop build.
+      - name: Prestongram Desktop build.
         if: env.ONLY_CACHE == 'false'
         run: |
           cd $REPO_NAME/Telegram
@@ -495,9 +495,9 @@ jobs:
           if [ -n "${{ matrix.defines }}" ]; then
             DEFINE="-D ${{ matrix.defines }}=ON"
             echo Define from matrix: $DEFINE
-            echo ::set-env name=ARTIFACT_NAME::Kotatogram_${{ matrix.defines }}
+            echo ::set-env name=ARTIFACT_NAME::Prestongram_${{ matrix.defines }}
           else
-            echo ::set-env name=ARTIFACT_NAME::Kotatogram
+            echo ::set-env name=ARTIFACT_NAME::Prestongram
           fi
 
           ./configure.sh \
@@ -516,7 +516,7 @@ jobs:
         run: |
           cd $REPO_NAME/out/Debug
           mkdir artifact
-          mv Kotatogram.app artifact/
+          mv Prestongram.app artifact/
           mv Updater artifact/
       - uses: actions/upload-artifact@master
         if: env.UPLOAD_ARTIFACT == 'true'

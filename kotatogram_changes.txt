@@ -94,7 +94,7 @@
 - Option to hide Edit button in folder sidebar.
 - Compact folder sidebar option.
 - Restored unreleased notification toggle as option.
-- tg://settings/kotato link to open Kotatogram Settings. Also added three-dots menu there.
+- tg://settings/kotato link to open Prestongram Settings. Also added three-dots menu there.
 
 1.2 (19.03.2020)
 - Updated TDesktop sources to 1.9.21.
@@ -154,7 +154,7 @@
 - Highlight for specific media in album.
 
 1.0.10 (15.10.2019)
-- Change fonts in Kotatogram Settings.
+- Change fonts in Prestongram Settings.
 
 1.0.9 (11.10.2019)
 - Options menu: sticker height, emoji outline, scheduled messages button visibility.

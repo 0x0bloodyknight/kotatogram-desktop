@@ -3,10 +3,10 @@
     <id>io.github.kotatogram</id>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0</project_license>
-    <name>Kotatogram Desktop</name>
-    <summary>Kotatogram Desktop messenger</summary>
+    <name>Prestongram Desktop</name>
+    <summary>Prestongram Desktop messenger</summary>
     <description>
-        <p>Kotatogram Desktop is unofficial messaging based on Telegram Desktop.</p>
+        <p>Prestongram Desktop is unofficial messaging based on Telegram Desktop.</p>
         <p>Telegram is a popular messaging protocol with encryption and security as its key focus.</p>
     </description>
     <categories>
@@ -178,7 +178,7 @@
                     <li>Option to hide Edit button in folder sidebar.</li>
                     <li>Compact folder sidebar option.</li>
                     <li>Restored unreleased notification toggle as option.</li>
-                    <li>tg://settings/kotato link to open Kotatogram Settings. Also added three-dots menu there.</li>
+                    <li>tg://settings/kotato link to open Prestongram Settings. Also added three-dots menu there.</li>
                 </ul>
             </description>
         </release>

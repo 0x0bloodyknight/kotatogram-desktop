@@ -155,7 +155,7 @@ MainWindow::MainWindow(not_null<Controller*> controller)
 , _positionUpdatedTimer([=] { savePosition(); })
 , _outdated(CreateOutdatedBar(this))
 , _body(this)
-, _titleText(qsl("Kotatogram")) {
+, _titleText(qsl("Prestongram")) {
 	subscribe(Theme::Background(), [=](
 			const Theme::BackgroundUpdate &data) {
 		if (data.paletteChanged()) {
@@ -545,7 +545,7 @@ void MainWindow::updateUnreadCounter() {
 	}
 
 	const auto counter = Core::App().unreadBadge();
-	_titleText = (counter > 0) ? qsl("Kotatogram (%1)").arg(counter) : qsl("Kotatogram");
+	_titleText = (counter > 0) ? qsl("Prestongram (%1)").arg(counter) : qsl("Prestongram");
 
 	unreadCounterChangedHook();
 }

@@ -1,5 +1,5 @@
 /*
-This file is part of Kotatogram Desktop,
+This file is part of Prestongram Desktop,
 the unofficial app based on Telegram Desktop.
 
 For license and copyright information please follow this link:
@@ -934,7 +934,7 @@ void Manager::writeDefaultFile() {
 		return;
 	}
 	const char *defaultHeader = R"HEADER(
-// This is a list of default options for Kotatogram Desktop
+// This is a list of default options for Prestongram Desktop
 // Please don't modify it, its content is not used in any way
 // You can place your own options in the 'kotato-settings-custom.json' file
 
